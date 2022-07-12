@@ -23,19 +23,19 @@ void PrintArray (int [] collection)
 void SortBuble (int[] col)
 {
     int length = col.Length;
-    int i=0;    
-    while (i<length-1)
+    int sortetPos=0;    
+    while (sortetPos<length-1)
     {
-        int j=0;
-        while (j<length-1-i)
+        int index=0;
+        while (index<length-1-sortetPos)
         {
-            if (col[j] < col[j+1])
+            if (col[index] > col[index+1])
             {
-                (col[j] , col[j+1]) = (col[j+1] , col[j]);
+                (col[index] , col[index+1]) = (col[index+1] , col[index]);
             }
-            j++;
+            index++;
         }
-        i++;
+        sortetPos++;
 
     }
 }
