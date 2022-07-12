@@ -5,7 +5,7 @@ if (firstNum == toNum)
 {
     Console.WriteLine("цифры равны");
 }
-if (firstNum> toNum)
+else if (firstNum> toNum)
 {
     Console.WriteLine($"{num} -> {firstNum}");
 }
