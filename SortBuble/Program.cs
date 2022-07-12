@@ -4,7 +4,7 @@
     int index=0;
     while (index < length)
     {
-        collection[index] = new Random().Next (1, 100);
+        collection[index] = new Random().Next (1, 1000);
         index++; 
     }
 }
@@ -44,6 +44,7 @@ int [] array = new int [50];
 
 FillArray (array);
 Console.Clear();
+Console.WriteLine("Исходный массив");
 PrintArray (array);
 SortBuble (array);
 Console.WriteLine();
