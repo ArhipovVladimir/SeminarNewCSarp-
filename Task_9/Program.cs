@@ -1,15 +1,29 @@
 ﻿int num = new Random ().Next (10,100);
-int firstNum = num % 10;
-int toNum = num /10;
-if (firstNum == toNum) 
+
+
+int maxdig = MaxDigit(num);
+if (maxdig == 0)
 {
-    Console.WriteLine("цифры равны");
-}
-else if (firstNum> toNum)
-{
-    Console.WriteLine($"{num} -> {firstNum}");
+    Console.WriteLine ($"{num} цыфры одинаковые");
 }
 else 
 {
-    Console.WriteLine($"{num} -> {toNum}");
-} 
+    Console.WriteLine ($"{num} -> {MaxDigit(num)}");
+}
+
+int MaxDigit (int number)
+{
+    int num = new Random ().Next (10,100);
+    int firstNum = number % 10;
+    int toNum = number /10;
+    if (firstNum == toNum) 
+        {
+        return 0;
+        }
+    if (firstNum > toNum)
+        {
+        return firstNum;
+        }
+        return toNum;
+    
+}
