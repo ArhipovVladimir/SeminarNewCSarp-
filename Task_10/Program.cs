@@ -17,4 +17,3 @@ int dif (int num)
 }
 
 
-
