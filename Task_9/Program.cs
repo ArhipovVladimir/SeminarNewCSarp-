@@ -13,7 +13,6 @@ else
 
 int MaxDigit (int number)
 {
-    int num = new Random ().Next (10,100);
     int firstNum = number % 10;
     int toNum = number /10;
     if (firstNum == toNum) 
