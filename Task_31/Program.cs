@@ -1,13 +1,14 @@
 ﻿
 
-void FillArr (int [] a)
+int [] FillArr (int site, int min, int max)
 {
-    int len=a.Length;
+    int[] array = new int [site];
     Random r = new Random();
-    for (int i = 0 ; i < len; i++)  
+    for (int i = 0 ; i < array.Length; i++)  
     {
-        a[i] = r.Next(-9,10);
+        array [i] = r.Next(min,max+1);
     }
+    return array;
 }
 
 void PrintArr (int [] arr)
@@ -22,7 +23,7 @@ void PrintArr (int [] arr)
     Console.Write($"{arr[len-1]}]");
 }
 
-int[] array = new int [12];
+
 
 int SumPozit (int [] ap)
 {   
@@ -47,7 +48,12 @@ int SumNegat (int [] an)
 }
 
 
-FillArr(array);
+Console.WriteLine($"введите длинну иамммива");
+int site = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"введите диапозон от до");
+int min = Convert.ToInt32(Console.ReadLine());
+int max = Convert.ToInt32(Console.ReadLine());
+int [] array = FillArr(site, min, max);
 PrintArr(array);
 int sp = SumPozit(array);
 Console.WriteLine();
