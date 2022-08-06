@@ -9,7 +9,7 @@
 int Sumdig(int num)
 {
     int sum=0;
-    for (int i= num; i > 0 ; i--)
+    for (int i= 1; i <= 0 ; i--)
         {
             sum=sum+i;
         }
