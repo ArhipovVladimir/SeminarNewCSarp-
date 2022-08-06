@@ -25,38 +25,29 @@ void PrintArr (int [] arr)
 
 
 
-int SumPozit (int [] ap)
+int [] GetSumNegPozit (int [] array)
 {   
-    int sump = 0;
-    int len =ap.Length; 
-    for (int i = 0; i < len; i++)
+    int NegSum = 0;
+    int PozSum =0;
+    for (int i = 0; i < array.Length; i++)
         {
-            if (ap[i]>0) sump=sump+ap[i];
+            if (array[i]<0) 
+            {
+                NegSum += array[i];
+            }
+            else
+            {
+                PozSum += array[i];
+            }
         }
-    return sump;
-}
-
-int SumNegat (int [] an)
-{   
-    int sumn = 0;
-    int len =an.Length; 
-    for (int i = 0; i < len; i++)
-        {
-            if (an[i]<0) sumn=sumn+an[i];
-        }
-    return sumn;
+    return new int[] {NegSum,PozSum};
 }
 
 
-Console.WriteLine($"введите длинну иамммива");
-int site = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"введите диапозон от до");
-int min = Convert.ToInt32(Console.ReadLine());
-int max = Convert.ToInt32(Console.ReadLine());
-int [] array = FillArr(site, min, max);
-PrintArr(array);
-int sp = SumPozit(array);
+int [] array = FillArr (12, -9, 9);
+PrintArr (array);
+int [] sumNegPozit = GetSumNegPozit(array);
 Console.WriteLine();
-Console.WriteLine($"сумма положительных элементов массива равна {sp}");
-int sn = SumNegat(array);
-Console.WriteLine($"сумма отрицательных элементов массива равна {sn}");
+Console.WriteLine ($"Сумма положительных элементов = {sumNegPozit[1]}");
+Console.WriteLine ($"Сумма отрицательных элементов = {sumNegPozit[0]}");
+
