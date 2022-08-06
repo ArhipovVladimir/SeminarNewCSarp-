@@ -22,7 +22,7 @@ void PrintArr (int [] arr)
     {
         Console.Write ($"{arr[i]}, ");  
     }
-    Console.Write($"{arr[7]}]");
+    Console.Write($"{arr[len-1]}]");
 }
 
 int[] array = new int [8];
