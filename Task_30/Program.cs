@@ -16,11 +16,13 @@ void FillArr (int [] a)
 void PrintArr (int [] arr)
 
 {
-   int len=arr.Length;
-    for (int i = 0 ; i < len; i++)  
+    int len=arr.Length;
+    Console.Write("[");
+    for (int i = 0 ; i < len-1; i++)  
     {
         Console.Write ($"{arr[i]}, ");  
     }
+    Console.Write($"{arr[7]}]");
 }
 
 int[] array = new int [8];
