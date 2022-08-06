@@ -12,7 +12,7 @@ string Quarte (string q)
 if (q == "1") return"xc >0  && yc >0";
 if (q == "2") return "xc < 0  && yc > 0";
 if (q == "3") return "xc < 0  && yc < 0";
-if (q == "3") return "xc > 0  && yc < 0";
+if (q == "4") return "xc > 0  && yc < 0";
 return "введены некорректные короодинвты";
 
 }
