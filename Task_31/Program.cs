@@ -14,13 +14,12 @@ int [] FillArr (int site, int min, int max)
 void PrintArr (int [] arr)
 
 {
-    int len=arr.Length;
     Console.Write("[");
-    for (int i = 0 ; i < len-1; i++)  
+    for (int i = 0 ; i < arr.Length-1; i++)  
     {
         Console.Write ($"{arr[i]}, ");  
     }
-    Console.Write($"{arr[len-1]}]");
+    Console.Write($"{arr[arr.Length-1]}]");
 }
 
 
