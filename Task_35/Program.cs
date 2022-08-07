@@ -22,18 +22,20 @@ void Print(int[] arr)
     }
 }
 
-int CountElemunt(int[] array, int min, int max)
-{
+int CountElemunt (int [] array, int min, int max)
+{   
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] >= min && array[i] <= max)
+        if (array [i] >= min && array[i] <= max)
         {
             count++;
         }
     }
     return count;
 }
+
+
 
 Console.Write("Введите размер массива ");
 int site = Convert.ToInt32(Console.ReadLine());
@@ -43,10 +45,9 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] array = FillArr(site, min, max);
 Print(array);
 Console.WriteLine();
-
 //Console.Write("Введите размер массива ");
 //Console.WriteLine("Введите диапозон поиска ");
 //int minFind = Convert.ToInt32(Console.ReadLine());
 //int maxFind = Convert.ToInt32(Console.ReadLine());
-int count = CountElemunt(array, 10, 99);
-Console.WriteLine($"колличество эементов в диапозоне от 10 до 99 {count}");
+int count = CountElemunt (array, 10, 99);
+Console.WriteLine ($"колличество эементов в диапозоне от 10 до 99 {count}");
