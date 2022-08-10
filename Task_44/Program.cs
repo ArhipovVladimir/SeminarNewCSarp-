@@ -8,13 +8,13 @@ void Fibbo (int d)
 {   int n1 =0;
     int n2 =1; 
     int temp = 0;
-    Console.Write(n1);
-    Console.Write(n2);
+    Console.Write($"{n1 }");
+    Console.Write($"{n2 }");
     for (int i = 2 ; i < d; i++)
     {   
         n1=n2;
         n2=temp+n1;
-        Console.Write(n2);
+        Console.Write($"{n2} ");
         temp = n1;
     }
 }
