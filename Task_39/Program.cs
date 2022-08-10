@@ -38,7 +38,7 @@ void Reverse(int[] array)
     }
 }
 
-int[] array = Fillarray(5, 1, 9);
+int[] array = Fillarray(12, 10, 30);
 Printarray(array);
 Reverse(array);
 Console.WriteLine();
