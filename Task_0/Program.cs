@@ -1,5 +1,5 @@
 ﻿//программа выодит хвадрат числа
-Console.clear();
+//Console.Clear();
 Console.Write("ввидете число");
 int num = Convert.ToInt32(Console.ReadLine());
 int res = num*num;
